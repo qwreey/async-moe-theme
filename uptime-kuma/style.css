@@ -1,0 +1,29 @@
+.bg-primary {
+  background-color: rgb(247, 157, 237) !important;
+}
+.hp-bar-big .beat {
+  background-color: rgb(255, 132, 241) !important;
+}
+.hp-bar-big .beat.down {
+  background-color: rgb(255, 77, 77) !important;
+}
+.hp-bar-big .beat.maintenance {
+  background-color: rgb(13, 202, 240) !important;
+}
+.hp-bar-big .beat.pending {
+  background-color: #f8a306 !important;
+}
+.overall-status .ok {
+  color: #f5acff !important;
+}
+.dark {
+  background-color: #0e001a !important;
+  color: #fadaff !important;
+}
+.dark .shadow-box {
+  background-color: #1f002b;
+}
+.dark .shadow-box:not(.alert) {
+  background-color: #1b0022;
+}
+
