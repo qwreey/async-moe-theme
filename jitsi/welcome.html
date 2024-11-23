@@ -3,10 +3,42 @@
 <meta name="msapplication-TileColor" content="#030005">
 <meta name="theme-color" content="#030005">
 <style>
-:root{--primary-dark:#ff33e9;--primary-dark:#ff75f0;--primary-normal:#f79ded;--primary-light:#ffa8f5;--primary-lighter:#ffb0f6;--background-normal:#0e001a;--background-dark:#08000f;--background-darker:#030005;--background-light:#1b0022;--background-lighter:#290033;--text-normal:#fbdeff;--text-dark:#f8c2ff;--text-light:#fcebff;--text-darker:#f194ff;--text-lighter:#fef7ff;--secondary-normal:#ac54ff;--secondary-dark:#a442ff;--secondary-darker:#9524ff;--secondary-light:#b86bff;--secondary-lighter:#c485ff;--background-lightest:#3e004e;--text-darkest:#ed79ff;}
+:root {
+  --Q-primary-lightest: #ffc7f8;
+  --Q-primary-lighter: #ffb0f6;
+  --Q-primary-light: #ffa8f5;
+  --Q-primary-normal: #f79ded;
+  --Q-primary-dark: #ff75f0;
+  --Q-primary-darker: #ff33e9;
+  --Q-primary-darkest: #f013da;
+  --Q-background-lightest: #3e004e;
+  --Q-background-lighter: #290033;
+  --Q-background-light: #1b0022;
+  --Q-background-normal: #0e001a;
+  --Q-background-dark: #08000f;
+  --Q-background-darker: #030005;
+  --Q-background-darkest: #000000;
+  --Q-text-lightest: #fffcff;
+  --Q-text-lighter: #fef7ff;
+  --Q-text-light: #fcebff;
+  --Q-text-normal: #fbdeff;
+  --Q-text-dark: #f8c2ff;
+  --Q-text-darker: #f194ff;
+  --Q-text-darkest: #ed79ff;
+  --Q-secondary-lightest: #d7adff;
+  --Q-secondary-lighter: #c485ff;
+  --Q-secondary-light: #b86bff;
+  --Q-secondary-normal: #ac54ff;
+  --Q-secondary-dark: #a442ff;
+  --Q-secondary-darker: #9524ff;
+  --Q-secondary-darkest: #9524ff;
+}
 :root{scrollbar-color: #ff33e988 rgba(0, 0, 0, 0);}
 
 /* Welcome Page */
+@media only screen and (max-width: 500px) {
+	#enter_room{flex-direction: column !important;}
+}
 .header{background-image:none !important;}
 .header-text-subtitle{font-weight:500 !important; font-size:18 !important;}
 .welcome-watermark{display:none !important;}
@@ -35,6 +67,7 @@
 [class*='-options'] svg {fill:var(--background-normal) !important;}
 [class*='-options']:hover{fill:var(--background-dark) !important;background-color:var(--primary-dark) !important;}
 [class$='-button-tertiary-medium']{color:var(--text-light) !important;}
+[class$='-copyButton']{background: var(--secondary-dark) !important;}
 
 /* Noti */
 #notifications-container>div{background-color:var(--background-lighter) !important;}
@@ -47,6 +80,8 @@
 
 /* Modal */
 .overlay__content>div,[class*='-modal'].medium,.settings-dialog{background-color:var(--background-dark) !important;border: 1px solid var(--background-lighter) !important;}
+[class$='-dialogContents']{background:none !important;}
+[class*='-modal']>[class$='-footer']:empty{display:none !important;}
 
 /* Inputs */
 textarea[class*='-input'],input[class*='-input'],select[class*='-select']{color:var(--text-light) !important;background-color:var(--background-lighter) !important;}
@@ -99,7 +134,7 @@ span[class$='-displayName']{color:var(--text-normal) !important;}
 #videoResolutionLabel{background:var(--text-darker) !important;color:var(--background-darker) !important;}
 .chat-header{color:var(--text-light) !important;}
 .resizable-filmstrip:hover{background-color:rgb(37 0 51 / 50%) !important;}
-.resizable-filmstrip [class*='-containerBackground']{background-color:var(--background-lighter) !important;}
+:is(.resizable-filmstrip,.filmstrip__videos) [class*='-containerBackground']{background-color:var(--background-lighter) !important;}
 
 /* Toolbox */
 .toolbox-content-items{padding-left: 8px !important;padding-right: 8px !important;background:var(--background-lighter) !important;}
@@ -109,6 +144,7 @@ span[class$='-displayName']{color:var(--text-normal) !important;}
 .toolbox-icon.toggled:hover,.toolbox-icon.toggled:active{background:var(--text-dark) !important;}
 .settings-button-small-icon{background:var(--background-darker) !important;}
 .settings-button-small-icon:hover{background:var(--background-light) !important;}
+.toolbox-icon.hangup-menu-button,.toolbox-icon.hangup-button{background-color:var(--secondary-darker) !important;}
 
 /* Chat */
 .chatmessage{border-radius: 12px !important;background-color:var(--background-lightest) !important;color:var(--text-dark) !important;}
@@ -127,16 +163,33 @@ span[class$='-displayName']{color:var(--text-normal) !important;}
 #react>[class$='-container']:has([class$='-backdrop']){backdrop-filter: blur(4px);}
 
 /* Powered by */
-.POWEREDBY_ROOT{opacity: 0.6;margin-bottom:2px;text-size: 14px;text-align: center;color:var(--text-darkest);background:var(--background-darker)}
+.POWEREDBY_ROOT{opacity: 0.6;margin-bottom:2px;font-size: 14px;text-align: center;color:var(--text-darkest);background:var(--background-darker)}
+
+/* Invite Dialog */
+.invite-more-dialog.separator{display:none !important;}
+#add-people-copy-link-button>#add-people-copy-link-button-sr-text>[class$='-container']{display:none !important;}
+
+/* Recolor 'You are sharing your screen' */
+#largeVideoBackgroundContainer+[class$='-overlayContainer']:has([class$='-laptop'],[class$='-laptopStand'],[class$='-sharingMessage'],[class$='-showSharing']){background-color:var(--background-darker) !important;}
+#largeVideoBackgroundContainer+[class$='-overlayContainer']>[class$='-laptop']{border: 3px solid var(--text-dark) !important;}
+#largeVideoBackgroundContainer+[class$='-overlayContainer']>[class$='-laptopStand']{background-color:var(--text-dark) !important;}
+#largeVideoBackgroundContainer+[class$='-overlayContainer']>[class$='-sharingMessage']{color:var(--text-light) !important;}
+#largeVideoBackgroundContainer+[class$='-overlayContainer']>[class$='-showSharing']{color:var(--secondary-light) !important;}
+
+/* Move etherpad */
+#etherpad{
+	align-items: center;
+	display: flex;
+}
 </style>
 <script>
 {(()=>{
 const $=document.querySelector.bind(document)
 document.addEventListener("DOMContentLoaded", (event)=>{
 const title=$('.header-text-title')
-if(title)title.innerText = 'async.moe - meet'
+if(title)title.innerText='async.moe - meet'
 const subtitle=$('.header-text-subtitle')
-subtitle.innerText = 'Meeting platform provided by Qwreey'
+if(subtitle)subtitle.innerText='Meeting platform provided by Qwreey'
 $('#enter_room')?.appendChild($('.welcome-page-settings'))
 const footer=$('.welcome-footer')
 if(footer){

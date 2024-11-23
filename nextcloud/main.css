@@ -1,0 +1,131 @@
+:root {
+  --Q-primary-lightest: #ffc7f8;
+  --Q-primary-lighter: #ffb0f6;
+  --Q-primary-light: #ffa8f5;
+  --Q-primary-normal: #f79ded;
+  --Q-primary-dark: #ff75f0;
+  --Q-primary-darker: #ff33e9;
+  --Q-primary-darkest: #f013da;
+  --Q-background-lightest: #3e004e;
+  --Q-background-lighter: #290033;
+  --Q-background-light: #1b0022;
+  --Q-background-normal: #0e001a;
+  --Q-background-dark: #08000f;
+  --Q-background-darker: #030005;
+  --Q-background-darkest: #000000;
+  --Q-text-lightest: #fffcff;
+  --Q-text-lighter: #fef7ff;
+  --Q-text-light: #fcebff;
+  --Q-text-normal: #fbdeff;
+  --Q-text-dark: #f8c2ff;
+  --Q-text-darker: #f194ff;
+  --Q-text-darkest: #ed79ff;
+  --Q-secondary-lightest: #d7adff;
+  --Q-secondary-lighter: #c485ff;
+  --Q-secondary-light: #b86bff;
+  --Q-secondary-normal: #ac54ff;
+  --Q-secondary-dark: #a442ff;
+  --Q-secondary-darker: #9524ff;
+  --Q-secondary-darkest: #9524ff;
+}
+
+.app-menu-icon__icon,
+.logo-icon {
+  opacity: 0.85;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(82%) saturate(6181%)
+    hue-rotate(186deg) brightness(108%) contrast(108%) !important;
+}
+.app-menu-entry__label {
+  color: var(--Q-text-light) !important;
+}
+#header .header-menu__trigger-icon {
+  color: var(--Q-text-light) !important;
+}
+body {
+  background-color: var(--Q-background-light) !important;
+}
+
+:root {
+  /* Primary */
+  --color-primary: var(--Q-primary-dark);
+  --color-primary-text: var(--Q-background-normal);
+  --color-primary-hover: var(--Q-primary-normal);
+  --color-primary-light: var(--Q-primary-light);
+  --color-primary-light-text: var(--Q-background-light);
+  --color-primary-light-hover: var(--Q-background-lighter);
+  --color-primary-element: var(--Q-primary-normal);
+  --color-primary-element-hover: var(--Q-primary-light);
+  --color-primary-element-text: var(--Q-background-normal);
+  --color-primary-element-text-dark: var(--Q-background-dark);
+  --color-primary-element-light: var(--Q-primary-light);
+  --color-primary-element-light-hover: var(--Q-primary-lighter);
+  --color-primary-element-light-text: var(--Q-background-lighter);
+
+  /* Background Color */
+  --color-background-hover: var(--Q-background-lighter);
+  --color-background-dark: var(--Q-background-dark);
+  --color-background-darker: var(--Q-background-darker);
+  --color-placeholder-light: #313131;
+  --color-placeholder-dark: #4a4a4a;
+  --color-background-plain: var(--Q-secondary-dark);
+  --color-background-plain-text: var(--Q-text-light);
+  --color-main-background: var(--Q-background-dark);
+  --color-main-background-rgb: 8, 0, 15;
+
+  /* Text Color */
+  --color-main-text: var(--Q-text-light);
+  --color-text-maxcontrast: var(--Q-text-darker);
+  --color-text-maxcontrast-default: var(--Q-text-darker);
+  --color-text-maxcontrast-background-blur: var(--Q-text-darkest);
+  --color-text-light: var(--color-main-text);
+  --color-text-lighter: var(--color-text-maxcontrast);
+
+  /* Extra Color */
+  --color-error: #ff3333;
+  --color-error-rgb: 255, 51, 51;
+  --color-error-hover: #ff6666;
+  --color-error-text: #ff8080;
+  --color-warning: #ffcc00;
+  --color-warning-rgb: 255, 204, 0;
+  --color-warning-hover: #ffd633;
+  --color-warning-text: #ffcc00;
+  --color-success: #3b973b;
+  --color-success-rgb: 59, 151, 59;
+  --color-success-hover: #4cb94c;
+  --color-success-text: #5ec05e;
+  --color-info: #00aeff;
+  --color-info-rgb: 0, 174, 255;
+  --color-info-hover: #33beff;
+  --color-info-text: #00aeff;
+  --color-favorite: #ffde00;
+
+  /* Loading Color */
+  --color-loading-light: #777;
+  --color-loading-dark: #ccc;
+
+  /* Box Shadow Color */
+  --color-box-shadow-rgb: 0, 0, 0;
+  --color-box-shadow: var(--Q);
+
+  /* Border Color */
+  --color-border: #292929;
+  --color-border-dark: #3b3b3b;
+  --color-border-maxcontrast: var(--Q-secondary-darkest);
+
+  /* ETC */
+  --gradient-primary-background: linear-gradient(
+    40deg,
+    var(--color-primary) 0%,
+    var(--color-primary-hover) 100%
+  );
+  --color-main-background-translucent: rgba(
+    var(--color-main-background-rgb),
+    0.97
+  );
+  --color-main-background-blur: rgba(var(--color-main-background-rgb), 0.85);
+  --filter-background-blur: none;
+  --gradient-main-background: var(--color-main-background) 0%,
+    var(--color-main-background-translucent) 85%, transparent 100%;
+  --color-scrollbar: var(--secondary-lighter) transparent;
+  --image-background: none;
+}
