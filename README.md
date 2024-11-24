@@ -17,6 +17,6 @@ To get more information, check [jitsi/README.md](./jitsi/README.md)
 
 ## Nextcloud
 
-![preview image](./nextcloud/preview/preview.png)
+![preview image](./nextcloud/preview.png)
 
 To get more information, check [nextcloud/README.md](./nextcloud/README.md)
