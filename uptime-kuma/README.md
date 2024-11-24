@@ -1,7 +1,7 @@
 
 # uptime-kuma
 
-![preview image](./preview/Screenshot_From_2024-11-21 10-30-55.png)
+![preview image](./preview/Screenshot_From_2024-11-21_10-30-55.png)
 
 ## How to apply
 
