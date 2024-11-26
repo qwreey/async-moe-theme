@@ -129,3 +129,14 @@ body {
   --color-scrollbar: var(--secondary-lighter) transparent;
   --image-background: none;
 }
+
+/* Only office fullscreen */
+body:has(.app-onlyoffice) > header {
+  display: none !important;
+}
+.app-onlyoffice > div > iframe {
+  height: 100% !important;
+}
+.app-onlyoffice {
+  margin-top: 0 !important;
+}
